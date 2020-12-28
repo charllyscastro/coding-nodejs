@@ -2,8 +2,9 @@
   "name": "livecoding",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "dev": "nodemon",
     "lint": "eslint --ext .js,.html -f ./node_modules/eslint-friendly-formatter . --fix",
     "prepush": "npm run lint",
     "start": "node server.js"

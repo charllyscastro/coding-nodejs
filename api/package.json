@@ -1,7 +1,7 @@
 {
   "name": "livecoding",
   "version": "1.0.0",
-  "description": "",
+  "description": "Aplicação CRUD com Nodejs + Postgresql + Azure",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon",
@@ -9,8 +9,14 @@
     "prepush": "npm run lint",
     "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "postgresql",
+    "crud",
+    "azure",
+    "node-postgres"
+  ],
+  "author": "Charllys Castro",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^6.8.0",

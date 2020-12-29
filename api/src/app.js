@@ -12,7 +12,7 @@
 
  // ==> Rotas da API
  const index = require('./routes/index');
- //const productRoute = require('./routes/product.routes');
+ const productRoute = require('./routes/product.routes');
 
  //quando for fazer alguma req. 
  app.use(express.urlencoded({ extended: true }));
@@ -21,6 +21,6 @@
  app.use(cors());
 
  app.use(index);
- // app.use('/api/', productRoute); //localhost:3000/api/{rota}
+ app.use('/api/', productRoute); //localhost:3000/api/{rota}
 
  module.exports = app;

@@ -12,13 +12,17 @@
 
 // ==> conexão com a Base de Dados (PostgresSQL)
  const pool = new Pool({
-   connectionString: process.env.DATABASE_URL
+  user: process.env.PGUSER,
+  host: process.env.PGHOST,
+  database: process.env.PGDATABASE,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT,
  });
 
- pool.on('connect', () =>{
+ pool.on('connect', () => {
   console.log('Base de Dados conectado com sucesso!');
  });
 
  module.exports = {
-  query: (text, params) => pool.query(text.params)
+  query: (text, params) => pool.query(text, params),
  };

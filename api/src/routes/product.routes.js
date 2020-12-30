@@ -15,4 +15,12 @@ router.post('/products', productController.createProduct);
 // ==> Rota responsavel por selecionar todos os 'Products': (GET): localhost:3000/api/products
 router.get('/products', productController.listAllProducts);
 
+// ==> Rota responsavel por selecionar um 'Product' pelo 'Id': (GET): localhost:3000/api/products/:id
+router.get('/products/:id', productController.findProductById);
+
+// ==> Rota responsavel por atualizar um 'product' pelo 'Id': (POST): localhost:3000/api/products/:id
+router.put('/products/:id', productController.updateProductById);
+
+// ==> Rota responsavel excluir um 'product' pelo 'Id': (POST): localhost:3000/api/products/:id
+router.delete('/products/:id', productController.deleteProductById);
 module.exports = router;

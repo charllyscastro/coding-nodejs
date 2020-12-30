@@ -23,4 +23,5 @@ router.put('/products/:id', productController.updateProductById);
 
 // ==> Rota responsavel excluir um 'product' pelo 'Id': (DELETE): localhost:3000/api/products/:id
 router.delete('/products/:id', productController.deleteProductById);
+
 module.exports = router;
